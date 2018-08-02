@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.photolist.PhotoListFragment"
+    android:background="@color/colorPrimary">
+
+   <android.support.v7.widget.RecyclerView
+       android:clipToPadding="true"
+       android:id="@+id/photo_list_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="6dp"/>
+
+   <com.victor.loading.rotate.RotateLoading
+       android:id="@+id/rotateloading"
+       android:layout_width="80dp"
+       android:layout_height="80dp"
+       android:layout_gravity="center"
+       app:loading_color="@color/colorAccent"
+       app:loading_width="5dp" />
+
+</FrameLayout>
