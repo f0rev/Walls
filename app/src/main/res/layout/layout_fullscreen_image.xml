@@ -3,29 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <com.feevx.ravan.worldcupwallpapers.configs.widgets.TouchImageView
-        android:id="@+id/imgDisplay"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter" />
-    <!--<ImageView-->
-        <!--android:id="@+id/imgDisplay"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:scaleType="fitCenter" />-->
+        android:layout_height="match_parent">
+        <com.feevx.ravan.worldcupwallpapers.configs.widgets.TouchImageView
+            android:id="@+id/imgDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
 
-    <Button
-        android:id="@+id/btnClose"
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:background="@drawable/button_background"
-        android:textColor="#ffffff"
-        android:text="Close" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_margin="2dp"
+            android:textAllCaps="false"
+            android:alpha="0.5"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/set_wallpaper"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_margin="2dp"
+            android:textAllCaps="false"
+            android:alpha="0.5"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:text="Set" />
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

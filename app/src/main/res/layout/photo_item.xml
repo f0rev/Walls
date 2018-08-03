@@ -8,10 +8,11 @@
             type="com.kc.unsplash.models.Photo" />
     </data>
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="110dp"
         android:layout_height="170dp"
         android:layout_margin="3dp">
+
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
@@ -19,6 +20,8 @@
             android:scaleType="centerCrop"
             app:picture="@{photo.urls.thumb}" />
 
-    </RelativeLayout>
+
+
+    </FrameLayout>
 
 </layout>
