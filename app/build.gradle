@@ -29,7 +29,6 @@ android {
 dependencies {
     def support_library_version = "28.0.0-beta01"
     def lifecycle_version = "1.1.1"
-    def room_version = "1.1.1"
     def butterknife_version = "8.8.1"
     def retrofit_version = "2.4.0"
     def dagger_version = "2.15"
@@ -54,13 +53,6 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
 
-    //Room
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
-
-    // optional - RxJava support for Room
-    implementation "android.arch.persistence.room:rxjava2:$room_version"
-
     //RxJava
     implementation 'io.reactivex.rxjava2:rxjava:2.1.14-RC1'
 
@@ -80,9 +72,6 @@ dependencies {
     //Gson Converter
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
-    //SQL Brite
-    implementation 'com.squareup.sqlbrite3:sqlbrite:3.2.0'
-
     //Dagger 2
     implementation "com.google.dagger:dagger:$dagger_version"
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
@@ -93,18 +82,15 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
-    //Calligraphy
-    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
-
     //RotateLoading
     implementation 'com.victor:lib:1.0.4'
 
-    //Unsplash library
-
-    //    implementation 'com.kc.androidunsplash:androidunsplash:0.2.1'
-
     //Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    //FlexBox
     implementation 'com.google.android:flexbox:1.0.0'
+
+    //Unsplash photo service
     implementation project(':androidunsplash')
 }
